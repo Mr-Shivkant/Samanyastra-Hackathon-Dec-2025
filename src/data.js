@@ -1,3 +1,14 @@
+import smartshopImg from "./assets/images/smartshop.png";
+import taskmasterImg from "./assets/images/task.png";
+import weatherImg from "./assets/images/weather.png";
+import htmlImg from "./assets/images/html.png";
+import cssImg from "./assets/images/css.png";
+import jsImg from "./assets/images/js.png";
+import tsImg from "./assets/images/ts.png";
+import reactImg from "./assets/images/react.png";
+import tailwindImg from "./assets/images/tl.png";
+
+
 const data = {
   "profileImage": "portfolio/profile.jpeg",
 
@@ -17,14 +28,15 @@ const data = {
     ]
   },
 
-  "languages": [
-    { "name": "HTML5", "img": "icons/html5.png" },
-    { "name": "CSS3", "img": "icons/css3.png" },
-    { "name": "JavaScript", "img": "icons/javascript.png" },
-    { "name": "TypeScript", "img": "icons/typescript.png" },
-    { "name": "React", "img": "icons/react.png" },
-    { "name": "Tailwind", "img": "icons/tailwind.png" }
-  ],
+"languages": [
+  { "name": "HTML5", "img": htmlImg },
+  { "name": "CSS3", "img": cssImg },
+  { "name": "JavaScript", "img": jsImg },
+  { "name": "TypeScript", "img": tsImg },
+  { "name": "React", "img": reactImg },
+  { "name": "Tailwind", "img": tailwindImg }
+],
+
 
   "socialLinks": [
     { "icon": "linkedin", "href": "https://linkedin.com/in/alexjohnson" },
@@ -81,21 +93,22 @@ const data = {
   "projects": [
     {
       "title": "SmartShop - E-commerce Platform",
-      "image": "/images/smartshop.jpg",
+      "image": smartshopImg,
       "description": "A full-featured e-commerce platform with payment integration, inventory management, and admin dashboard.",
       "tech": ["React.js", "Node.js", "MongoDB", "Stripe", "Redux", "Express", "JWT", "AWS S3"]
     },
     {
       "title": "TaskMaster Pro - Project Management",
-      "image": "/images/taskmaster.jpg",
+      "image": taskmasterImg,
       "description": "Collaborative project management tool with real-time updates, task tracking, and team communication features.",
       "tech": ["Next.js", "TypeScript", "Socket.io", "PostgreSQL", "Prisma", "Tailwind CSS", "Docker"]
     },
     {
       "title": "WeatherNow - Weather Dashboard",
-      "image": "portfolio/weather.jpeg",
+      "image": weatherImg,
       "description": "Real-time weather application with forecasts, maps, and personalized weather alerts.",
       "skills": ["React.js", "TypeScript", "OpenWeather API", "Mapbox", "Chart.js", "Material-UI", "PWA"]
     }
   ]
-}
+};
+export default data;

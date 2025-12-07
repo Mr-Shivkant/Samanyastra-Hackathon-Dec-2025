@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+    color: #fff;
+    font-family: "Outfit", sans-serif;
+    font-size: 22px;
+
+}
