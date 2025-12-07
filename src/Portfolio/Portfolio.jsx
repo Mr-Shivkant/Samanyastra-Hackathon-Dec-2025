@@ -144,37 +144,37 @@ const Portfolio = () => {
 
             {/* Nav Links */}
             <List>
-  {["Home", "About", "Experience", "Projects"].map((item) => (
-    <ListItem
-      button
-      key={item}
-      component="a"
-      href={`#${item.toLowerCase()}`}
-      onClick={toggleDrawer(false)}
-      sx={{
-        transition: "0.3s",
-        "&:hover": {
-          bgcolor: "rgba(255, 204, 0, 0.15)", // light golden bg
-          pl: 3,                              // slide effect
-        },
-        "&:active": {
-          bgcolor: "rgba(255, 204, 0, 0.25)",
-          transform: "scale(0.97)",
-        },
-      }}
-    >
-      <ListItemText
-        primary={item}
-        sx={{
-          color: "#fff",
-          fontWeight: 600,
-          letterSpacing: 1,
-          "&:hover": { color: "#ffcc00" },       // golden
-        }}
-      />
-    </ListItem>
-  ))}
-</List>
+              {["Home", "About", "Experience", "Projects"].map((item) => (
+                <ListItem
+                  button
+                  key={item}
+                  component="a"
+                  href={`#${item.toLowerCase()}`}
+                  onClick={toggleDrawer(false)}
+                  sx={{
+                    transition: "0.3s",
+                    "&:hover": {
+                      bgcolor: "rgba(255, 204, 0, 0.15)", 
+                      pl: 3,                             
+                    },
+                    "&:active": {
+                      bgcolor: "rgba(255, 204, 0, 0.25)",
+                      transform: "scale(0.97)",
+                    },
+                  }}
+                >
+                  <ListItemText
+                    primary={item}
+                    sx={{
+                      color: "#fff",
+                      fontWeight: 600,
+                      letterSpacing: 1,
+                      "&:hover": { color: "#ffcc00" },     
+                    }}
+                  />
+                </ListItem>
+              ))}
+            </List>
           </Box>
         </Drawer>
       </Box>
@@ -183,7 +183,7 @@ const Portfolio = () => {
       {/* Hero Section */}
       <Box
         display="flex"
-         id="home"
+        id="home"
         flexDirection={{ xs: "column-reverse", md: "row" }}
         gap={{ xs: 3, md: 6 }}
         alignItems="center"
@@ -211,33 +211,33 @@ const Portfolio = () => {
 
           {/* Social Links */}
           <Box mt={3} display="flex" gap={2} flexWrap="wrap">
-  {data.socialLinks.map((social) => (
-    <IconButton
-      key={social.icon}
-      component="a"
-      href={social.href}
-      target="_blank"
-      sx={{
-        color: "#fff",                    
-        bgcolor: "rgba(190, 44, 25, 0.1)", 
-        "&:hover": {
-          color: "#ffcc00",               
-          bgcolor: "rgba(255,204,0,0.2)", 
-          transform: "scale(1.2)",        
-        },
-        transition: "0.3s",
-        borderRadius: "50%",               
-        width: 50,
-        height: 50,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      {getSocialIcon(social.icon)}
-    </IconButton>
-  ))}
-</Box>
+            {data.socialLinks.map((social) => (
+              <IconButton
+                key={social.icon}
+                component="a"
+                href={social.href}
+                target="_blank"
+                sx={{
+                  color: "#fff",
+                  bgcolor: "rgba(190, 44, 25, 0.1)",
+                  "&:hover": {
+                    color: "#ffcc00",
+                    bgcolor: "rgba(255,204,0,0.2)",
+                    transform: "scale(1.2)",
+                  },
+                  transition: "0.3s",
+                  borderRadius: "50%",
+                  width: 50,
+                  height: 50,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                {getSocialIcon(social.icon)}
+              </IconButton>
+            ))}
+          </Box>
         </Box>
 
         {/* Right */}
@@ -302,8 +302,10 @@ const Portfolio = () => {
 
         {/* RIGHT — Text Content */}
         <Box flex={2} sx={{ color: "#ddd" }}>
-          <Typography variant="h4" mb={2} sx={{ fontWeight: 700, color: "#f83411ff", // golden color
-      textShadow: "2px 2px 8px rgba(141, 39, 39, 0.6)", }}>
+          <Typography variant="h4" mb={2} sx={{
+            fontWeight: 700, color: "#f83411ff", 
+            textShadow: "2px 2px 8px rgba(141, 39, 39, 0.6)",
+          }}>
             About Me
           </Typography>
 
@@ -324,19 +326,19 @@ const Portfolio = () => {
 
       {/* Skills Section */}
       <Box id="skills">
-         <Typography
-    variant="h4"
-    mb={3}
-    sx={{
-      fontWeight: 600,
-  
-      letterSpacing: 2,
-      color: "#ffffffff", // golden color
-      textShadow: "2px 2px 8px rgba(41, 40, 40, 0.6)", // glowing effect
-    }}
-  >
-    Skills & Languages
-  </Typography>
+        <Typography
+          variant="h4"
+          mb={3}
+          sx={{
+            fontWeight: 600,
+
+            letterSpacing: 2,
+            color: "#ffffffff", 
+            textShadow: "2px 2px 8px rgba(41, 40, 40, 0.6)", 
+          }}
+        >
+          Skills & Languages
+        </Typography>
         <Grid container spacing={2}>
           {data.languages.map((lang, idx) => (
             <Grid item key={idx}>
@@ -348,7 +350,7 @@ const Portfolio = () => {
                   color: "#fff",
                   minWidth: 180,
                   fontWeight: 600,
-                 
+
                 }}
               />
             </Grid>
@@ -357,256 +359,256 @@ const Portfolio = () => {
       </Box>
 
       {/* Experience Section */}
-    <Box
-  id="experience"
-  sx={{
-    mt: 10,
-    pb: 10,
-    px: { xs: 2, md: 5 }, // padding for responsiveness
-  }}
->
-  <Typography
-    variant="h4"
-    sx={{
-      fontWeight: 700,
-      mb: 6,
-      textAlign: "center",
-      letterSpacing: 2,
-      color: "#f4fcffff", // golden color
-      textShadow: "2px 2px 8px rgba(71, 71, 71, 0.5)",
-    }}
-  >
-    Experience
-  </Typography>
-
-  {/* Top Horizontal Line */}
-  <Box
-    sx={{
-      width: "100%",
-      height: "2px",
-      bgcolor: "rgba(255,204,0,0.5)", // golden accent line
-      mb: 8,
-    }}
-  />
-
-  {/* Timeline Boxes */}
-  <Grid
-    container
-    spacing={4}
-    sx={{
-      display: "grid",
-      gridTemplateColumns: {
-        xs: "1fr",
-        sm: "repeat(2, 1fr)",
-        md: "repeat(3, 1fr)",
-      },
-      gap: 4,
-    }}
-  >
-    {data.experience.map((exp, idx) => (
       <Box
-        key={idx}
+        id="experience"
         sx={{
-          textAlign: "left",
-          position: "relative",
-          px: 2,
-          py: 3,
-          bgcolor: "#1e1e1e",
-          borderRadius: 3,
-          boxShadow: "0px 5px 15px rgba(0,0,0,0.5)",
-          transition: "0.3s",
-          "&:hover": {
-            transform: "translateY(-5px)",
-            boxShadow: "0px 10px 25px rgba(255,204,0,0.5)",
-          },
-          "&:before": {
-            content: '""',
-            position: "absolute",
-            top: "-32px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "2px",
-            height: "34px",
-            bgcolor: "rgba(248, 248, 248, 0.7)",
-          },
+          mt: 10,
+          pb: 10,
+          px: { xs: 2, md: 5 }, 
         }}
       >
         <Typography
-          variant="h6"
+          variant="h4"
           sx={{
             fontWeight: 700,
-            lineHeight: 1.3,
-            color: "#f5c011ff", // golden color
+            mb: 6,
+            textAlign: "center",
+            letterSpacing: 2,
+            color: "#f4fcffff", 
+            textShadow: "2px 2px 8px rgba(3, 2, 2, 0.5)",
           }}
         >
-          {exp.role}
+          Experience
         </Typography>
 
-        <Typography
+        {/* Top Horizontal Line */}
+        <Box
           sx={{
-            fontSize: 14,
-            fontWeight: 500,
-            color: "#00ffff", // cyan accent for period
-            mb: 1,
+            width: "100%",
+            height: "2px",
+            bgcolor: "rgba(255,204,0,0.5)", 
+            mb: 8,
           }}
-        >
-          ({exp.period})
-        </Typography>
+        />
 
-        <Typography
+        {/* Timeline Boxes */}
+        <Grid
+          container
+          spacing={4}
           sx={{
-            fontSize: 14,
-            lineHeight: 1.5,
-            color: "rgba(255,255,255,0.8)",
-            mb: 2,
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              sm: "repeat(2, 1fr)",
+              md: "repeat(3, 1fr)",
+            },
+            gap: 4,
           }}
         >
-          {exp.description}
-        </Typography>
-
-        {/* Skills */}
-        <Box mt={1} display="flex" flexWrap="wrap" gap={1}>
-          {exp.skills.map((skill, idx2) => (
-            <Chip
-              key={idx2}
-              label={skill}
-              size="small"
+          {data.experience.map((exp, idx) => (
+            <Box
+              key={idx}
               sx={{
-                bgcolor: "rgba(255,255,255,0.1)",
-                border: "1px solid rgba(175, 173, 173, 0.5)",
-                color: "#ffffffff",
-                fontWeight: 500,
-                borderRadius: "6px",
+                textAlign: "left",
+                position: "relative",
+                px: 2,
+                py: 3,
+                bgcolor: "#1e1e1e",
+                borderRadius: 3,
+                boxShadow: "0px 5px 15px rgba(0,0,0,0.5)",
                 transition: "0.3s",
                 "&:hover": {
-                  bgcolor: "rgba(32, 51, 116, 0.3)",
-                  color: "#edf1f5ff",
-                  transform: "scale(1.05)",
+                  transform: "translateY(-5px)",
+                  boxShadow: "0px 10px 25px rgba(255,204,0,0.5)",
+                },
+                "&:before": {
+                  content: '""',
+                  position: "absolute",
+                  top: "-32px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: "2px",
+                  height: "34px",
+                  bgcolor: "rgba(248, 248, 248, 0.7)",
                 },
               }}
-            />
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: 700,
+                  lineHeight: 1.3,
+                  color: "#f5c011ff",
+                }}
+              >
+                {exp.role}
+              </Typography>
+
+              <Typography
+                sx={{
+                  fontSize: 14,
+                  fontWeight: 500,
+                  color: "#00ffff", 
+                  mb: 1,
+                }}
+              >
+                ({exp.period})
+              </Typography>
+
+              <Typography
+                sx={{
+                  fontSize: 14,
+                  lineHeight: 1.5,
+                  color: "rgba(255,255,255,0.8)",
+                  mb: 2,
+                }}
+              >
+                {exp.description}
+              </Typography>
+
+              {/* Skills */}
+              <Box mt={1} display="flex" flexWrap="wrap" gap={1}>
+                {exp.skills.map((skill, idx2) => (
+                  <Chip
+                    key={idx2}
+                    label={skill}
+                    size="small"
+                    sx={{
+                      bgcolor: "rgba(255,255,255,0.1)",
+                      border: "1px solid rgba(175, 173, 173, 0.5)",
+                      color: "#ffffffff",
+                      fontWeight: 500,
+                      borderRadius: "6px",
+                      transition: "0.3s",
+                      "&:hover": {
+                        bgcolor: "rgba(32, 51, 116, 0.3)",
+                        color: "#edf1f5ff",
+                        transform: "scale(1.05)",
+                      },
+                    }}
+                  />
+                ))}
+              </Box>
+            </Box>
           ))}
-        </Box>
+        </Grid>
       </Box>
-    ))}
-  </Grid>
-</Box>
 
 
       {/* Projects Section */}
       <Box id="projects" sx={{ mt: 10 }}>
-  <Typography
-    variant="h4"
-    mb={4}
-    sx={{
-      fontWeight: 700,
-      textAlign: "center",
-      letterSpacing: 1,
-    }}
-  >
-    Projects
-  </Typography>
-
-  <Grid
-    container
-    spacing={3}
-    sx={{
-      display: "grid",
-      gridTemplateColumns: {
-        xs: "1fr",
-        sm: "repeat(2, 1fr)",
-        md: "repeat(3, 1fr)",
-      },
-      gap: 3,
-    }}
-  >
-    {data.projects.map((proj, idx) => (
-      <Box
-        key={idx}
-        sx={{
-          borderRadius: 3,
-          overflow: "hidden",
-          bgcolor: "#2b2b2b",
-          border: "1px solid rgba(255,255,255,0.12)",
-          transition: "0.35s",
-          cursor: "pointer",
-          boxShadow: "0 0 20px rgba(0,0,0,0.4)",
-
-          "&:hover": {
-            transform: "translateY(-8px)",
-            boxShadow: "0 20px 35px rgba(0,0,0,0.6)",
-            border: "1px solid rgba(255,255,255,0.3)",
-          },
-        }}
-      >
-        {/* Image Section */}
-        <Box
+        <Typography
+          variant="h4"
+          mb={4}
           sx={{
-            width: "100%",
-            height: 150, // smaller height
-            overflow: "hidden",
+            fontWeight: 700,
+            textAlign: "center",
+            letterSpacing: 1,
           }}
         >
-          <img
-            src={proj.image}
-            alt={proj.title}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              transition: "0.5s",
-            }}
-            className="proj-img"
-          />
-        </Box>
+          Projects
+        </Typography>
 
-        {/* Content */}
-        <Box sx={{ p: 2 }}>
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: 600,
-              mb: 1,
-              fontSize: "18px", // smaller title
-            }}
-          >
-            {proj.title}
-          </Typography>
+        <Grid
+          container
+          spacing={3}
+          sx={{
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              sm: "repeat(2, 1fr)",
+              md: "repeat(3, 1fr)",
+            },
+            gap: 3,
+          }}
+        >
+          {data.projects.map((proj, idx) => (
+            <Box
+              key={idx}
+              sx={{
+                borderRadius: 3,
+                overflow: "hidden",
+                bgcolor: "#2b2b2b",
+                border: "1px solid rgba(255,255,255,0.12)",
+                transition: "0.35s",
+                cursor: "pointer",
+                boxShadow: "0 0 20px rgba(0,0,0,0.4)",
 
-          <Typography
-            sx={{
-              fontSize: "13px", // smaller text
-              color: "#ccc",
-              lineHeight: 1.4,
-              mb: 2,
-              height: 45, // fix height for equal cards
-              overflow: "hidden",
-            }}
-          >
-            {proj.description}
-          </Typography>
-
-          {/* Tech Chips */}
-          <Box display="flex" flexWrap="wrap" gap={1}>
-            {(proj.tech || proj.skills).map((tech, idx2) => (
-              <Chip
-                key={idx2}
-                label={tech}
-                size="small"
+                "&:hover": {
+                  transform: "translateY(-8px)",
+                  boxShadow: "0 20px 35px rgba(0,0,0,0.6)",
+                  border: "1px solid rgba(255,255,255,0.3)",
+                },
+              }}
+            >
+              {/* Image Section */}
+              <Box
                 sx={{
-                  bgcolor: "rgba(255,255,255,0.1)",
-                  borderRadius: "5px",
-                  fontSize: "11px",
-                  color: "#fff",
+                  width: "100%",
+                  height: 150,
+                  overflow: "hidden",
                 }}
-              />
-            ))}
-          </Box>
-        </Box>
+              >
+                <img
+                  src={proj.image}
+                  alt={proj.title}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    transition: "0.5s",
+                  }}
+                  className="proj-img"
+                />
+              </Box>
+
+              {/* Content */}
+              <Box sx={{ p: 2 }}>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    fontWeight: 600,
+                    mb: 1,
+                    fontSize: "18px", 
+                  }}
+                >
+                  {proj.title}
+                </Typography>
+
+                <Typography
+                  sx={{
+                    fontSize: "13px",
+                    color: "#ccc",
+                    lineHeight: 1.4,
+                    mb: 2,
+                    height: 45, 
+                    overflow: "hidden",
+                  }}
+                >
+                  {proj.description}
+                </Typography>
+
+                {/* Tech Chips */}
+                <Box display="flex" flexWrap="wrap" gap={1}>
+                  {(proj.tech || proj.skills).map((tech, idx2) => (
+                    <Chip
+                      key={idx2}
+                      label={tech}
+                      size="small"
+                      sx={{
+                        bgcolor: "rgba(255,255,255,0.1)",
+                        borderRadius: "5px",
+                        fontSize: "11px",
+                        color: "#fff",
+                      }}
+                    />
+                  ))}
+                </Box>
+              </Box>
+            </Box>
+          ))}
+        </Grid>
       </Box>
-    ))}
-  </Grid>
-</Box>
 
     </Stack>
   );
