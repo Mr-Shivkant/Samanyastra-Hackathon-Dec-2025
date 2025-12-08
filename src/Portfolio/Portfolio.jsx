@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Stack,
-  Typography,
-  Box,
-  Avatar,
-  Chip,
-  Grid,
-  IconButton,
-} from "@mui/material";
+import {Stack, Typography, Box, Avatar, Chip, Grid, IconButton,} from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -59,7 +51,7 @@ const Portfolio = () => {
         m: 0,
       }}
     >
-      {/* Navbar */}
+      {/* navbar */}
       <Box
         component="nav"
         width="100%"
@@ -76,11 +68,12 @@ const Portfolio = () => {
           zIndex: 1000,
         }}
       >
-        <Typography variant="h6" sx={{ fontWeight: 600 }}>
+        <Typography variant="h6" component="a" sx={{ fontWeight: 600 ,cursor: "pointer" }}>
+          
           {data.hero.name} Portfolio
         </Typography>
 
-        {/* Desktop Nav */}
+        {/* desktop Nav */}
         <Box
           component="ul"
           display={{ xs: "none", md: "flex" }}
@@ -154,11 +147,12 @@ const Portfolio = () => {
                   sx={{
                     transition: "0.3s",
                     "&:hover": {
-                      bgcolor: "rgba(255, 204, 0, 0.15)", 
-                      pl: 3,                             
+                      pl: 3, 
+                    boxShadow: "2px 2px 5px white",
+                    borderRadius: "10px",                            
                     },
                     "&:active": {
-                      bgcolor: "rgba(255, 204, 0, 0.25)",
+                      bgcolor: "rgba(0, 153, 255, 0.25)",
                       transform: "scale(0.97)",
                     },
                   }}
@@ -209,7 +203,7 @@ const Portfolio = () => {
             {data.hero.description}
           </Typography>
 
-          {/* Social Links */}
+          {/* social Links */}
           <Box mt={3} display="flex" gap={2} flexWrap="wrap">
             {data.socialLinks.map((social) => (
               <IconButton
@@ -272,7 +266,7 @@ const Portfolio = () => {
         }}
       />
 
-      {/* About Section */}
+      {/* About Part */}
       <Box
         id="about"
         display="flex"
@@ -286,7 +280,7 @@ const Portfolio = () => {
           boxShadow: "0px 0px 15px rgba(0,0,0,0.5)",
         }}
       >
-        {/* LEFT — Photo */}
+        {/* left — Photo */}
         <Box flex={1} display="flex" justifyContent="center">
           <Avatar
             src={profileImg}
@@ -300,7 +294,7 @@ const Portfolio = () => {
           />
         </Box>
 
-        {/* RIGHT — Text Content */}
+        {/* right — Text Content */}
         <Box flex={2} sx={{ color: "#ddd" }}>
           <Typography variant="h4" mb={2} sx={{
             fontWeight: 700, color: "#f83411ff", 
@@ -315,7 +309,7 @@ const Portfolio = () => {
               sx={{
                 mb: 2,
                 lineHeight: 1.7,
-                fontSize: "18px",
+                fontSize: "16px",
               }}
             >
               {p}
@@ -324,7 +318,7 @@ const Portfolio = () => {
         </Box>
       </Box>
 
-      {/* Skills Section */}
+      {/* Skills Part */}
       <Box id="skills">
         <Typography
           variant="h4"
@@ -346,10 +340,10 @@ const Portfolio = () => {
                 label={lang.name}
                 avatar={<Avatar alt={lang.name} src={lang.img} />}
                 sx={{
-                  bgcolor: "#1a3463ff",
+                  bgcolor: "#2c313bff",
                   color: "#fff",
                   minWidth: 180,
-                  fontWeight: 600,
+                  fontWeight: 500,
 
                 }}
               />
@@ -358,7 +352,7 @@ const Portfolio = () => {
         </Grid>
       </Box>
 
-      {/* Experience Section */}
+      {/* Experience part */}
       <Box
         id="experience"
         sx={{
@@ -495,13 +489,13 @@ const Portfolio = () => {
       </Box>
 
 
-      {/* Projects Section */}
+      {/* Projects Part */}
       <Box id="projects" sx={{ mt: 10 }}>
         <Typography
           variant="h4"
           mb={4}
           sx={{
-            fontWeight: 700,
+            fontWeight: 600,
             textAlign: "center",
             letterSpacing: 1,
           }}
@@ -527,8 +521,10 @@ const Portfolio = () => {
               key={idx}
               sx={{
                 borderRadius: 3,
+                
                 overflow: "hidden",
                 bgcolor: "#2b2b2b",
+
                 border: "1px solid rgba(255,255,255,0.12)",
                 transition: "0.35s",
                 cursor: "pointer",
@@ -541,7 +537,7 @@ const Portfolio = () => {
                 },
               }}
             >
-              {/* Image Section */}
+              {/* image Section */}
               <Box
                 sx={{
                   width: "100%",
@@ -557,6 +553,7 @@ const Portfolio = () => {
                     height: "100%",
                     objectFit: "cover",
                     transition: "0.5s",
+                    
                   }}
                   className="proj-img"
                 />
@@ -581,14 +578,13 @@ const Portfolio = () => {
                     color: "#ccc",
                     lineHeight: 1.4,
                     mb: 2,
-                    height: 45, 
                     overflow: "hidden",
                   }}
                 >
                   {proj.description}
                 </Typography>
 
-                {/* Tech Chips */}
+                {/*  tech */}
                 <Box display="flex" flexWrap="wrap" gap={1}>
                   {(proj.tech || proj.skills).map((tech, idx2) => (
                     <Chip
